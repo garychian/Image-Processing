@@ -35,4 +35,19 @@ The image noise will affect the performace of edge detection, so add guassian bl
 
 
 ## Canny
-## SIFT
+
+## SIFT(Scale Invariant Feature Transform)
+### Pipeline
+#### 1. Constructing a scale Space
+To make sure that features are scale-independent
+
+#### 2. Keypoint Localisation
+Identifyling the suitable features or keypoints
+
+#### 3. Orientation Assignment
+Ensure the keypoints are rotation invariant
+
+#### 4. Keypoint Descriptor
+Assign a unique figerprint of each keypoint
+
+
