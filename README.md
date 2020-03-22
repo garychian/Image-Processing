@@ -29,6 +29,7 @@
 ### Example with image after Gaussian Blur
 
   <img src = "https://github.com/garychian/Image-Processing/blob/master/Prewitt/prewitt%20with%20GB%20image.png" width = 240 height = 360>
+  
 ### Conclusion:
 The image noise will affect the performace of edge detection, so add guassian blur to filter the images are necessary for getting good performance. 
 
