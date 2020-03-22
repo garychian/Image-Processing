@@ -5,7 +5,9 @@
 - Since the Fourier transform of a Gaussian is another Gaussian, applying a Guassian blur has the effect of reducing the image’s high-frequency components; at same time, a Gaussian blur is thus a low pass filter.  
 - A box blur (also known as a box linear filter) is a spatial domain linear filter in which each pixel in the resulting image has a value equal to the average value of its neighboring pixels in the input image. It is a form of low-pass ("blurring") filter. A 3 by 3 box blur can be written as 1/9 * determinant matrix:
 
-![](https://github.com/yoyoberenguer/Gaussian-Blur/blob/master/boxblur.png)
+  ![](https://github.com/yoyoberenguer/Gaussian-Blur/blob/master/boxblur.png)
+### Example with 3x3 convolution kernel
+  ![](https://github.com/garychian/Image-Processing/blob/master/Gaussian%20Blur/example%20with%20Gaussian%20blur.png)
 ## Prewitt
 ## Canny
 ## SIFT
