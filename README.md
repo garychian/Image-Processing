@@ -41,13 +41,45 @@ The image noise will affect the performace of edge detection, so add guassian bl
 #### 1. Constructing a scale Space
 To make sure that features are scale-independent
 
+> Scale space is a collection of images having different scales, generated from a signle image.
+
+> Difference of Gaussian is a feature enhancement algorithm that involves the subtraction of one blurred version of an original image from another, less blurred version of the original 
+##### Here is a visual explanation how DOG works
+<img src = "https://cdn.analyticsvidhya.com/wp-content/uploads/2019/09/Screenshot-from-2019-09-25-12-48-03.png" width = 240 >
+
 #### 2. Keypoint Localisation
 Identifyling the suitable features or keypoints
 
+##### Local Max and local Min
+> To locate the local Max and Min, we go through every pixel in the image and compare it with its neighboring pixels
+##### Keypoint Selection
+> Eliminate the keypoints that have low contrast, or lie very close to the edge
+
 #### 3. Orientation Assignment
 Ensure the keypoints are rotation invariant
+##### Calculate Magnitude and Orientation
+
+<img src = "https://cdn.analyticsvidhya.com/wp-content/uploads/2019/09/Screenshot-from-2019-09-25-19-22-24.png">
+
+> The magnitude represents the intensity of the pixel and the orientation gives the direction for the same
+
 
 #### 4. Keypoint Descriptor
 Assign a unique figerprint of each keypoint
+##### Keypoint Descriptor
+We will first take a 16×16 neighborhood around the keypoint. This 16×16 block is further divided into 4×4 sub-blocks and for each of these sub-blocks, we generate the histogram using magnitude and orientation.
 
+<img src = "https://cdn.analyticsvidhya.com/wp-content/uploads/2019/09/Screenshot-from-2019-09-26-20-10-52.png">
+
+##### Here is my results using my images
+
+<img src = "https://github.com/garychian/Image-Processing/blob/master/SIFT/Image%20point.png" width = 600 height = 300>
+
+###### Feature Matching 
+
+<img src = "https://github.com/garychian/Image-Processing/blob/master/SIFT/point%20match.png" width = 600 height = 500>
+
+### End Note
+
+SIFT is a very useful method to explore the same objects in two pictures. When thers is more than 80% points match, we can say two images have same objects. 
 
